@@ -1,35 +1,136 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Link from '@material-ui/core/Link';
+import Box from '@material-ui/core/Box';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
+}));
+
+
+export default function Header() {
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    left: false,
+  });
+
+  const links = (i) => {
+    switch(i){
+      case 0:
+        return "https://github.com/Koblinskis";
+      case 1:
+        return "https://twitter.com/KoblinskiSteven";
+      case 2: 
+        return "https://github.com/Koblinskis";
+      case 3: 
+        return "https://github.com/Koblinskis";
+      default:
+        return
+    }
+  }
+  
+  const icons = (i) => {
+    switch(i){
+      case 0:
+        return <GitHubIcon/>;
+      case 1:
+        return <TwitterIcon/>;
+      case 2: 
+        return <LinkedInIcon/>;
+      case 3: 
+        return <FacebookIcon/>;
+      default:
+        return
+    }
+  }
+
+  const toggleDrawer = (side, open) => event => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [side]: open });
+  };
+
+  const sideList = side => (
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+      className={classes.list}
+      role="presentation"
+      onClick={toggleDrawer(side, false)}
+      onKeyDown={toggleDrawer(side, false)}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <List>
+            {['Git Hub', 'Twitter', 'Linkedin', 'Facebook'].map((text, index) => (
+              <div><Divider /><Link href={links(index)} >
+              <ListItem button key={text} href={links(index)} >
+                <ListItemIcon>{icons(index)}</ListItemIcon>
+                <ListItemText primary={text} />
+              
+  
+              </ListItem></Link></div>
+            
+            ))}
+            <Divider />
+          </List>
     </div>
-  </header>
-)
+  );
+
+  return (
+    <Box 
+    borderBottom={2}
+    component="div"
+    className={classes.root} style={{
+      margin: `0 auto`,
+      marginBottom: '1.45rem',
+      maxWidth: '100%',
+      padding: `0 0rem`,
+    }}>
+      <AppBar position="static" style={{
+        backgroundColor: "#0066ff"
+      }}>
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon onClick={toggleDrawer('left', true)} />
+          </IconButton>
+          <div>Title</div>
+        </Toolbar>
+      </AppBar>
+      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+        {sideList('left')}
+      </Drawer>
+    </Box>
+  );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -39,4 +140,3 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
