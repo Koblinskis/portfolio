@@ -18,6 +18,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
+import AImage from '../components/Aimage';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,6 +36,9 @@ const useStyles = makeStyles(theme => ({
   fullList: {
     width: 'auto',
   },
+  text: {
+    textAlign: 'center'
+  }
 }));
 
 
@@ -89,6 +93,8 @@ export default function Header() {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
+    <AImage/>
+    <p className={classes.text}>Michael Koblinski</p>
       <List>
             {['Git Hub', 'Twitter', 'Linkedin', 'Facebook'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >

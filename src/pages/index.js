@@ -78,7 +78,7 @@ const IndexPage = () => {
       case 1:
         return "https://twitter.com/KoblinskiSteven";
       case 2: 
-        return "https://github.com/Koblinskis";
+        return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b/";
       case 3: 
         return "https://github.com/Koblinskis";
       default:
@@ -111,9 +111,8 @@ const IndexPage = () => {
         <Box border={1} borderBottom={2} borderRight={2} className={classes.content} component="div">
           <BImage />
           <h1 className={classes.center}>About Me</h1>
-          <p className={classes.text}>Lorem ipsum dolor amet crucifix blue bottle everyday carry cliche cronut snackwave helvetica vice sustainable. Farm-to-table organic celiac sartorial poke bushwick pickled photo booth next level 3 wolf moon godard try-hard thundercats poutine pork belly. Raclette squid banjo godard fixie man braid listicle swag woke pok pok. Aesthetic neutra disrupt, iPhone ennui pitchfork seitan roof party polaroid normcore coloring book.
-
-Umami cloud bread gastropub skateboard. Retro narwhal tote bag bushwick farm-to-table brunch portland next level. Direct trade migas chia snackwave, trust fund hammock paleo keffiyeh scenester kinfolk banh mi poutine brooklyn. Mlkshk taiyaki brooklyn raw denim forage hella yuccie shabby chic franzen woke hexagon cornhole salvia. Lo-fi readymade iPhone, kale chips skateboard kogi put a bird on it man braid 3 wolf moon. Coloring book hell of fashion axe messenger bag palo santo ennui actually authentic tacos art party cloud bread kinfolk snackwave stumptown.</p>
+          <p className={classes.text}>Hi, my name is Steven Michael Koblinski and I am going to begin this by talking about myself. I first started programming in high school when I decided to take a class on Web Page Design and Game Programming. After high school I pursued programming as I had a passion for it. Since then I have become proficient in both front-end and back-end along with server databases.</p>
+          
           <h1>Projects</h1>
           <iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
             frameBorder='0'
@@ -123,9 +122,7 @@ Umami cloud bread gastropub skateboard. Retro narwhal tote bag bushwick farm-to-
             height="300"
             width="533"
           />
-          <p className={classes.text}>Lorem ipsum dolor amet crucifix blue bottle everyday carry cliche cronut snackwave helvetica vice sustainable. Farm-to-table organic celiac sartorial poke bushwick pickled photo booth next level 3 wolf moon godard try-hard thundercats poutine pork belly. Raclette squid banjo godard fixie man braid listicle swag woke pok pok. Aesthetic neutra disrupt, iPhone ennui pitchfork seitan roof party polaroid normcore coloring book.
-
-Umami cloud bread gastropub skateboard. Retro narwhal tote bag bushwick farm-to-table brunch portlan</p>
+          <p className={classes.text}>Lorem ipsum </p>
         </Box>
 
       </div>
