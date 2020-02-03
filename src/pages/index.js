@@ -27,14 +27,14 @@ const useStyles = makeStyles({
     minWidth: 200,
     maxWidth: 250,
     maxHeight: '100%',
-    backgroundColor: '#80dfff',
+    backgroundColor: '#cccccc',
   },
   content: {
     flexGrow: 1,
     maxWidth: 710,
     minWidth: 600,
     maxHeight: '100%',
-    backgroundColor: '#b3ffb3',
+    backgroundColor: '#f2f2f2',
     textAlign: 'center'
   },
   center: {
