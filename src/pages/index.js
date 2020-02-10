@@ -122,7 +122,13 @@ const IndexPage = () => {
             height="300"
             width="533"
           />
-          <p className={classes.text}>Lorem ipsum </p>
+          <p className={classes.text}>This is a list of some of my more recent projects:
+          <ol>
+          <li><Link href={links(0)}>Blog Vs Blog</Link></li>
+          <li><Link href={links(1)}>New International Foods</Link></li>
+          <li><Link href={links(2)}>Project 3</Link></li>
+          </ol>
+          </p>
         </Box>
 
       </div>
