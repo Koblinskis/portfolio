@@ -17,17 +17,21 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     justifyContent: 'space-between',
   },
   sideBar: {
+    display: 'inline',
     flexGrow: 1,
     minWidth: 200,
     maxWidth: 250,
     maxHeight: '100%',
     backgroundColor: '#cccccc',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
   },
   content: {
     flexGrow: 1,
@@ -48,7 +52,7 @@ const useStyles = makeStyles({
     paddingRight: '25px',
     textIndent: '30px'
   }
-});
+}));
 
 
 

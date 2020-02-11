@@ -25,7 +25,11 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   menuButton: {
+    display: 'block',
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
   },
   title: {
     flexGrow: 1,

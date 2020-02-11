@@ -7,15 +7,22 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { makeStyles } from '@material-ui/core/styles';
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const useStyles = makeStyles(theme => ({
+  hero: {
+    width: '100%',
+  },
+}));
 
+const Layout = ({ children }) => {
+  const classes = useStyles();
   return (
     <>
-      <Header />
+      <Header className={classes.hero} />
       <div
         style={{
           margin: `0 auto`,
