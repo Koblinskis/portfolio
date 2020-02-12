@@ -14,7 +14,7 @@ import "./layout.css"
 
 const useStyles = makeStyles(theme => ({
   hero: {
-    width: '100%',
+    minWidth: '100%',
   },
 }));
 
