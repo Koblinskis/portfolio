@@ -12,15 +12,3 @@ body {
   background-color: #e6e6e6;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-}
-
-.side-bar {
-  width: 320
-}
-
-.container {
-  width: 640;
-}

@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   const classes = useStyles();
   return (
     <>
-      <Header className={classes.hero} />
+      <Header />
       <div
         style={{
           margin: `0 auto`,
