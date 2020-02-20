@@ -59,9 +59,7 @@ export default function Header() {
       case 1:
         return "https://twitter.com/KoblinskiSteven";
       case 2: 
-        return "https://github.com/Koblinskis";
-      case 3: 
-        return "https://github.com/Koblinskis";
+        return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b";
       default:
         return
     }
@@ -75,8 +73,6 @@ export default function Header() {
         return <TwitterIcon/>;
       case 2: 
         return <LinkedInIcon/>;
-      case 3: 
-        return <FacebookIcon/>;
       default:
         return
     }
@@ -100,7 +96,7 @@ export default function Header() {
     <AImage/>
     <p className={classes.text}>Michael Koblinski</p>
       <List>
-            {['Git Hub', 'Twitter', 'Linkedin', 'Facebook'].map((text, index) => (
+            {['Git Hub', 'Twitter', 'Linkedin'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)} >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
@@ -132,7 +128,7 @@ export default function Header() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon onClick={toggleDrawer('left', true)} />
           </IconButton>
-          <div>Title</div>
+          <div>STEVEN MICHAEL KOBLINSKI</div>
         </Toolbar>
       </AppBar>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>

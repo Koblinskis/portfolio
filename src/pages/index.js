@@ -68,8 +68,6 @@ const IndexPage = () => {
         return <TwitterIcon/>;
       case 2: 
         return <LinkedInIcon/>;
-      case 3: 
-        return <FacebookIcon/>;
       default:
         return
     }
@@ -83,8 +81,6 @@ const IndexPage = () => {
         return "https://twitter.com/KoblinskiSteven";
       case 2: 
         return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b/";
-      case 3: 
-        return "https://github.com/Koblinskis";
       default:
         return
     }
@@ -98,7 +94,7 @@ const IndexPage = () => {
           <AImage />
           <p className={classes.center}>Michael Koblinski</p>
           <List>
-            {['Git Hub', 'Twitter', 'Linkedin', 'Facebook'].map((text, index) => (
+            {['Git Hub', 'Twitter', 'Linkedin'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)}  >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
@@ -130,7 +126,6 @@ const IndexPage = () => {
           <ol>
           <li><Link href={links(0)}>Blog Vs Blog</Link></li>
           <li><Link href={links(1)}>New International Foods</Link></li>
-          <li><Link href={links(2)}>Project 3</Link></li>
           </ol>
           </p>
         </Box>
