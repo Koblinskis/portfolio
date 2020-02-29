@@ -114,14 +114,6 @@ const IndexPage = () => {
           <p className={classes.text}>Hi, my name is Steven Michael Koblinski and I am going to begin this by talking about myself. I first started programming in high school when I decided to take a class on Web Page Design and Game Programming. After high school I pursued programming as I had a passion for it. Since then I have become proficient in both front-end and back-end along with server databases.</p>
           
           <h1>Projects</h1>
-          <iframe src='https://www.youtube.com/embed/E7wJTI-1dvQ'
-            frameBorder='0'
-            allow='autoplay; encrypted-media'
-            allowFullScreen
-            title='video'
-            height="300"
-            width="533"
-          />
           <p className={classes.text}>This is a list of some of my more recent projects:
           <ol>
           <li><Link href={links(0)}>Blog Vs Blog</Link></li>
