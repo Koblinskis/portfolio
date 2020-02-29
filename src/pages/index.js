@@ -16,6 +16,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -86,6 +87,34 @@ const IndexPage = () => {
     }
   }
 
+  const projectLinks = (i) => {
+    switch(i){
+      case 0:
+        return "";
+      case 1:
+        return "";
+      case 2: 
+        return "";
+      default:
+        return
+    }
+  }
+
+  const blogLinks = (i) => {
+    switch(i){
+      case 0:
+        return "https://medium.com/@stevenkoblinskiw/the-benefits-of-pure-functions-in-javascript-5c9edf7b61bf";
+      case 1:
+        return "https://medium.com/@stevenkoblinskiw/the-javascript-event-loop-2e0fb6e6c0ba";
+      case 2: 
+        return "https://medium.com/@stevenkoblinskiw/inheritance-and-the-prototype-chain-901798f95ca6";
+      case 3:
+        return "https://medium.com/@stevenkoblinskiw/closures-in-javascript-5cfd57f8cdef";
+      default:
+        return
+    }
+  }
+
   return (
     <Layout >
       <SEO title="Home" />
@@ -116,12 +145,20 @@ const IndexPage = () => {
           <h1>Projects</h1>
           <p className={classes.text}>This is a list of some of my more recent projects:
           <ol>
-          <li><Link href={links(0)}>Blog Vs Blog</Link></li>
-          <li><Link href={links(1)}>New International Foods</Link></li>
+          <li><Link href={projectLinks(0)}>Blog Vs Blog</Link></li>
+          <li><Link href={projectLinks(1)}>New International Foods</Link></li>
           </ol>
           </p>
         </Box>
-
+        <Box>
+          <h1 className={classes.center}>Blogs</h1>
+          <ol>
+            <li><Link href={blogLinks(0)}>The Benefits of Pure Functions in JavaScript</Link></li>
+            <li><Link href={blogLinks(1)}>The JavaScript Event Loop</Link></li>
+            <li><Link href={blogLinks(2)}>Inheritance and the Prototype Chain</Link></li>
+            <li><Link href={blogLinks(2)}>Closures In JavaScript</Link></li>
+          </ol>
+        </Box>
       </div>
     </Layout>
   )
