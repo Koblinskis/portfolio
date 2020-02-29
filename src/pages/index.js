@@ -17,8 +17,29 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    maxWidth: 400,
+    marginLeft: '30px',
+    marginRight: '30px',
+    marginBottom: '30px',
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '20px',
+      marginRight: '20px',
+      marginBottom: '20px'
+    }
+  },
+  media: {
+    height: 140,
+  },
   container: {
     display: 'flex',
     justifyContent: 'center',
@@ -167,21 +188,144 @@ const IndexPage = () => {
           <p className={classes.text}>Hi, my name is Steven Michael Koblinski and I am going to begin this by talking about myself. I first started programming in high school when I decided to take a class on Web Page Design and Game Programming. After high school I pursued programming as I had a passion for it. Since then I have become proficient in both front-end and back-end along with server databases.</p>
           
           <h1>Projects</h1>
-          <p className={classes.text}>This is a list of some of my more recent projects:
-          <ol>
-          <li><Link href={projectLinks(0)}>Blog Vs Blog</Link></li>
-          <li><Link href={projectLinks(1)}>New International Foods</Link></li>
-          </ol>
-          </p>
+          <p className={classes.text}>This is a list of some of my more recent projects:</p>
+          <Grid container spacing={0}>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/BlogVBlog.jpg")}
+                    title="Blog V Blog"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Blog V Blog
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      A website where users pick one out of two randomly chosen blog titles, in the same category, that they find the most interesting
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={projectLinks(0)}>Learn More</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/New-foods.jpg")}
+                    title="New International Foods"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      New International Foods
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      A website made for a company to allow them to sell products online
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={projectLinks(1)}>Learn More</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
           <h1 className={classes.center}>Blogs</h1>
-          <p className={classes.text}>
-          <ol>
-            <li><Link href={blogLinks(0)}>The Benefits of Pure Functions in JavaScript</Link></li>
-            <li><Link href={blogLinks(1)}>The JavaScript Event Loop</Link></li>
-            <li><Link href={blogLinks(2)}>Inheritance and the Prototype Chain</Link></li>
-            <li><Link href={blogLinks(2)}>Closures In JavaScript</Link></li>
-          </ol>
-          </p>
+          <Grid container spacing={0}>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/pure-functions.jpg")}
+                    title="The Benefits of Pure Functions in JavaScript"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      The Benefits of Pure Functions in JavaScript
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                       the same category, that they find the most interesting
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={blogLinks(0)}>Learn More</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/event-loop.jpg")}
+                    title="The JavaScript Event Loop"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      The JavaScript Event Loop
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      A website made for a company to allow them to sell products online
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={blogLinks(1)}>Learn More</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/prototype-chain.jpg")}
+                    title="Inheritance and the Prototype Chain"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Inheritance and the Prototype Chain
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      A website made for a company to allow them to sell products online
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={blogLinks(2)}>Learn More</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/closures.jpg")}
+                    title="Closures In JavaScript"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Closures In JavaScript
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      A website made for a company to allow them to sell products online
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={blogLinks(3)}>Learn More</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
         </Box>
       </div>
     </Layout>
