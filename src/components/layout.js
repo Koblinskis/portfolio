@@ -16,6 +16,18 @@ const useStyles = makeStyles(theme => ({
   hero: {
     minWidth: '100%',
   },
+  pageSize: {
+    margin: `0 auto`,
+    maxWidth: 960,
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: 320,
+      margin: `0 auto`,
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 720,
+      margin: `0 auto`,
+    }
+  }
 }));
 
 const Layout = ({ children }) => {
@@ -23,13 +35,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className={classes.pageSize}>
         <main>{children}</main>
       </div>
     </>
