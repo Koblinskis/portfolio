@@ -132,9 +132,9 @@ const IndexPage = () => {
   const projectLinks = (i) => {
     switch(i){
       case 0:
-        return "";
+        return "https://competent-thompson-123cfb.netlify.com/";
       case 1:
-        return "";
+        return "https://newintlfoods.com/";
       case 2: 
         return "";
       default:
