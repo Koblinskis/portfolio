@@ -236,7 +236,7 @@ const IndexPage = () => {
                       New International Foods
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      A website made for a company to allow them to sell products online
+                      Catalog site for New International Foods, the #1 distributor of Asian foods in the eastern United States market. Made with Gatsby.
                     </Typography>
                   </CardContent>
                 <CardActions>
@@ -260,9 +260,6 @@ const IndexPage = () => {
                     <Typography gutterBottom variant="h5" component="h2">
                       The Benefits of Pure Functions in JavaScript
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                       the same category, that they find the most interesting
-                    </Typography>
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
@@ -281,9 +278,6 @@ const IndexPage = () => {
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       The JavaScript Event Loop
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      A website made for a company to allow them to sell products online
                     </Typography>
                   </CardContent>
                 <CardActions>
@@ -304,9 +298,6 @@ const IndexPage = () => {
                     <Typography gutterBottom variant="h5" component="h2">
                       Inheritance and the Prototype Chain
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      A website made for a company to allow them to sell products online
-                    </Typography>
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
@@ -325,9 +316,6 @@ const IndexPage = () => {
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       Closures In JavaScript
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      A website made for a company to allow them to sell products online
                     </Typography>
                   </CardContent>
                 <CardActions>
