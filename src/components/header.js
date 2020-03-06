@@ -113,7 +113,6 @@ export default function Header() {
 
   return (
     <Box 
-    borderBottom={2}
     component="div"
     className={classes.root} style={{
       margin: `0 auto`,

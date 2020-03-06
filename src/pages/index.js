@@ -51,6 +51,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 250,
     maxHeight: '100%',
     backgroundColor: '#cccccc',
+    borderColor: '#cecece',
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     }
@@ -62,6 +63,7 @@ const useStyles = makeStyles(theme => ({
     maxHeight: '100%',
     backgroundColor: '#f2f2f2',
     textAlign: 'center',
+    borderColor: '#cecece',
     [theme.breakpoints.down('sm')]: {
       maxWidth: 620,
       minWidth: 310,
@@ -179,7 +181,7 @@ const IndexPage = () => {
           </List>
           <p className={classes.center}>Created by Michael Koblinski</p>
         </Box>
-        <Box border={1} borderBottom={2} borderRight={2} className={classes.content} component="div">
+        <Box borderTop={1} borderBottom={2} borderRight={2} borderColor='#cecece' className={classes.content} component="div">
           <div className={classes.picture}>
           <BImage  />
 
