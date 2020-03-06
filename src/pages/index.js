@@ -71,6 +71,18 @@ const useStyles = makeStyles(theme => ({
   },
   center: {
     textAlign: 'center',
+    backgroundColor: '#0065ff',
+    marginTop: '0px',
+    padding: '10px',
+    color: 'white',
+    fontWeight: 300,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: '10px',
+      paddingRight: '10px',
+    }
+  },
+  centerTwo: {
+    textAlign: 'center',
     paddingLeft: '20px',
     paddingRight: '20px',
     [theme.breakpoints.down('sm')]: {
@@ -83,6 +95,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '25px',
     paddingRight: '25px',
     textIndent: '30px',
+    lineHeight: 1.7,
     [theme.breakpoints.down('sm')]: {
       textAlign: 'left',
       textIndent: '0px',
@@ -165,7 +178,7 @@ const IndexPage = () => {
       <div className={classes.container}>
         <Box border={1} borderRight={0} borderBottom={2} className={classes.sideBar} component="div">
           <AImage />
-          <p className={classes.center}>Michael Koblinski</p>
+          <p className={classes.centerTwo}>S. Michael Koblinski</p>
           <List>
             {['Git Hub', 'Twitter', 'Linkedin'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
@@ -179,17 +192,14 @@ const IndexPage = () => {
             ))}
             <Divider />
           </List>
-          <p className={classes.center}>Created by Michael Koblinski</p>
+          <p className={classes.centerTwo}>Created by S. Michael Koblinski</p>
         </Box>
         <Box borderTop={1} borderBottom={2} borderRight={2} borderColor='#cecece' className={classes.content} component="div">
-          <div className={classes.picture}>
-          <BImage  />
 
-          </div>
           <h1 className={classes.center}>About Me</h1>
           <p className={classes.text}>Junior developer seeking full-time employment as a full-stack developer. Mentored under senior developer in a structured training program including weekly attendance meetings and completion of goals. Completion of several course certificates and personal projects. Projects include both pair-programming and single projects exhibiting both front end and back end knowledge. Proficient in React, Gatsby, React Hooks, as well as NodeJS, mongoDB, REST APIs.</p>
           
-          <h1>Projects</h1>
+          <h1 className={classes.center}>Projects</h1>
           <p className={classes.text}>This is a list of some of my more recent projects:</p>
           <Grid container spacing={0}>
             <Grid item md={6} sm={6} xs={12}>

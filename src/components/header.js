@@ -94,7 +94,7 @@ export default function Header() {
       onKeyDown={toggleDrawer(side, false)}
     >
     <AImage/>
-    <p className={classes.text}>Michael Koblinski</p>
+    <p className={classes.text}>S. Michael Koblinski</p>
       <List>
             {['Git Hub', 'Twitter', 'Linkedin'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
@@ -127,7 +127,7 @@ export default function Header() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon onClick={toggleDrawer('left', true)} />
           </IconButton>
-          <div>STEVEN MICHAEL KOBLINSKI</div>
+          <div>S. MICHAEL KOBLINSKI</div>
         </Toolbar>
       </AppBar>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
