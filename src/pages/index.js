@@ -185,7 +185,7 @@ const IndexPage = () => {
 
           </div>
           <h1 className={classes.center}>About Me</h1>
-          <p className={classes.text}>Hi, my name is Steven Michael Koblinski and I am going to begin this by talking about myself. I first started programming in high school when I decided to take a class on Web Page Design and Game Programming. After high school I pursued programming as I had a passion for it. Since then I have become proficient in both front-end and back-end along with server databases.</p>
+          <p className={classes.text}>Junior developer seeking full-time employment as a full-stack developer. Mentored under senior developer in a structured training program including weekly attendance meetings and completion of goals. Completion of several course certificates and personal projects. Projects include both pair-programming and single projects exhibiting both front end and back end knowledge. Proficient in React, Gatsby, React Hooks, as well as NodeJS, mongoDB, REST APIs.</p>
           
           <h1>Projects</h1>
           <p className={classes.text}>This is a list of some of my more recent projects:</p>
