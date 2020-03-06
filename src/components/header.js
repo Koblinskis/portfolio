@@ -96,7 +96,7 @@ export default function Header() {
     <AImage/>
     <p className={classes.text}>S. Michael Koblinski</p>
       <List>
-            {['Git Hub', 'Twitter', 'Linkedin'].map((text, index) => (
+            {['GitHub', 'Twitter', 'Linkedin'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)} >
                 <ListItemIcon>{icons(index)}</ListItemIcon>

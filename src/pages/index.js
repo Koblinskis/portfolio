@@ -180,7 +180,7 @@ const IndexPage = () => {
           <AImage />
           <p className={classes.centerTwo}>S. Michael Koblinski</p>
           <List>
-            {['Git Hub', 'Twitter', 'Linkedin'].map((text, index) => (
+            {['GitHub', 'Twitter', 'Linkedin'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)}  >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
@@ -219,7 +219,7 @@ const IndexPage = () => {
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={projectLinks(0)}>Learn More</Link>
+                    <Link href={projectLinks(0)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -241,7 +241,7 @@ const IndexPage = () => {
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={projectLinks(1)}>Learn More</Link>
+                    <Link href={projectLinks(1)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -263,7 +263,7 @@ const IndexPage = () => {
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={blogLinks(0)}>Learn More</Link>
+                    <Link href={blogLinks(0)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -282,7 +282,7 @@ const IndexPage = () => {
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={blogLinks(1)}>Learn More</Link>
+                    <Link href={blogLinks(1)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -301,7 +301,7 @@ const IndexPage = () => {
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={blogLinks(2)}>Learn More</Link>
+                    <Link href={blogLinks(2)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -320,7 +320,7 @@ const IndexPage = () => {
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={blogLinks(3)}>Learn More</Link>
+                    <Link href={blogLinks(3)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
