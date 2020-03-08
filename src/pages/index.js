@@ -151,9 +151,9 @@ const IndexPage = () => {
       case 1:
         return "https://newintlfoods.com/";
       case 2: 
-        return "";
+        return "https://ecstatic-easley-06cd2c.netlify.com/";
       default:
-        return
+        return "https://github.com/Koblinskis"
     }
   }
 
@@ -242,6 +242,50 @@ const IndexPage = () => {
                 <CardActions>
                   <Button size="small" color="primary">
                     <Link href={projectLinks(1)}>Go To Site</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/Dionysus.png")}
+                    title="Dionysus"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Dionysus
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Dionysus is my most recent project that creates secure user accounts and and allows users to store some data
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={projectLinks(2)}>Go To Site</Link>
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item md={6} sm={6} xs={12}>
+              <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image={require("../images/github.png")}
+                    title="Github"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      And Many More
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      This is my github that contains all the projects I have work on thoughout the years
+                    </Typography>
+                  </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    <Link href={projectLinks(3)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
