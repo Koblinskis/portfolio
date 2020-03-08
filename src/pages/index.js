@@ -12,7 +12,7 @@ import Box from '@material-ui/core/Box';
 import AImage from '../components/Aimage';
 import BImage from '../components/Bimage';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
@@ -120,11 +120,13 @@ const IndexPage = () => {
 
   const icons = (i) => {
     switch(i){
-      case 0:
-        return <GitHubIcon/>;
+      case 0: 
+        return <EmailIcon/>;
       case 1:
+        return <GitHubIcon/>;
+      case 2:
         return <TwitterIcon/>;
-      case 2: 
+      case 3: 
         return <LinkedInIcon/>;
       default:
         return
@@ -134,10 +136,12 @@ const IndexPage = () => {
   const links = (i) => {
     switch(i){
       case 0:
-        return "https://github.com/Koblinskis";
+        return "mailto:stevenkoblinskiw@gmail.com";
       case 1:
+        return "https://github.com/Koblinskis";
+      case 2:
         return "https://twitter.com/KoblinskiSteven";
-      case 2: 
+      case 3: 
         return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b/";
       default:
         return
@@ -180,7 +184,7 @@ const IndexPage = () => {
           <AImage />
           <p className={classes.centerTwo}>S. Michael Koblinski</p>
           <List>
-            {['GitHub', 'Twitter', 'Linkedin'].map((text, index) => (
+            {['Email', 'GitHub', 'Twitter', 'LinkedIn'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)}  >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
@@ -200,7 +204,7 @@ const IndexPage = () => {
           <p className={classes.text}>Junior developer seeking full-time employment as a full-stack developer. Mentored under senior developer in a structured training program including weekly attendance meetings and completion of goals. Completion of several course certificates and personal projects. Projects include both pair-programming and single projects exhibiting both front end and back end knowledge. Proficient in React, Gatsby, React Hooks, as well as NodeJS, mongoDB, REST APIs.</p>
           
           <h1 className={classes.center}>Projects</h1>
-          <p className={classes.text}>This is a list of some of my more recent projects:</p>
+          <p>Here are some of my most recent projects.</p>
           <Grid container spacing={0}>
             
             <Grid item md={6} sm={6} xs={12}>
@@ -292,85 +296,15 @@ const IndexPage = () => {
               </Card>
             </Grid>
           </Grid>
-          <h1 className={classes.center}>Blogs</h1>
-          <Grid container spacing={0}>
-            <Grid item md={6} sm={6} xs={12}>
-              <Card className={classes.root}>
-                  <CardMedia
-                    className={classes.media}
-                    image={require("../images/pure-functions.jpg")}
-                    title="The Benefits of Pure Functions in JavaScript"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      The Benefits of Pure Functions in JavaScript
-                    </Typography>
-                  </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    <Link href={blogLinks(0)}>Go To Site</Link>
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item md={6} sm={6} xs={12}>
-              <Card className={classes.root}>
-                  <CardMedia
-                    className={classes.media}
-                    image={require("../images/event-loop.jpg")}
-                    title="The JavaScript Event Loop"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      The JavaScript Event Loop
-                    </Typography>
-                  </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    <Link href={blogLinks(1)}>Go To Site</Link>
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item md={6} sm={6} xs={12}>
-              <Card className={classes.root}>
-                  <CardMedia
-                    className={classes.media}
-                    image={require("../images/prototype-chain.jpg")}
-                    title="Inheritance and the Prototype Chain"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Inheritance and the Prototype Chain
-                    </Typography>
-                  </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    <Link href={blogLinks(2)}>Go To Site</Link>
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item md={6} sm={6} xs={12}>
-              <Card className={classes.root}>
-                  <CardMedia
-                    className={classes.media}
-                    image={require("../images/closures.jpg")}
-                    title="Closures In JavaScript"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Closures In JavaScript
-                    </Typography>
-                  </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    <Link href={blogLinks(3)}>Go To Site</Link>
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          </Grid>
+          <h1 className={classes.center}>Blog Articles</h1>
+
+          <p>Here are some blog articles that I have authored. Follow me on <a href="https://medium.com/@stevenkoblinskiw">Medium</a>.</p>
+              <ul style={{textAlign: 'left', fontSize: '20px', lineHeight: '2'}}>
+                <li><a href={blogLinks(2)}>Inheritance and the Prototype Chain</a></li>
+                <li><a href={blogLinks(3)}>Closures In JavaScript</a></li>
+                <li><a href={blogLinks(1)}>The JavaScript Event Loop</a></li>
+                <li><a href={blogLinks(0)}>The Benefits of Pure Functions in JavaScript</a></li>
+              </ul>
         </Box>
       </div>
     </Layout>

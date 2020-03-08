@@ -13,7 +13,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
@@ -52,27 +52,31 @@ export default function Header() {
     left: false,
   });
 
-  const links = (i) => {
+  const icons = (i) => {
     switch(i){
-      case 0:
-        return "https://github.com/Koblinskis";
+      case 0: 
+        return <EmailIcon/>;
       case 1:
-        return "https://twitter.com/KoblinskiSteven";
-      case 2: 
-        return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b";
+        return <GitHubIcon/>;
+      case 2:
+        return <TwitterIcon/>;
+      case 3: 
+        return <LinkedInIcon/>;
       default:
         return
     }
   }
-  
-  const icons = (i) => {
+
+  const links = (i) => {
     switch(i){
       case 0:
-        return <GitHubIcon/>;
+        return "mailto:stevenkoblinskiw@gmail.com";
       case 1:
-        return <TwitterIcon/>;
-      case 2: 
-        return <LinkedInIcon/>;
+        return "https://github.com/Koblinskis";
+      case 2:
+        return "https://twitter.com/KoblinskiSteven";
+      case 3: 
+        return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b/";
       default:
         return
     }
@@ -96,7 +100,7 @@ export default function Header() {
     <AImage/>
     <p className={classes.text}>S. Michael Koblinski</p>
       <List>
-            {['GitHub', 'Twitter', 'Linkedin'].map((text, index) => (
+            {['Email', 'GitHub', 'Twitter', 'LinkedIn'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)} >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
