@@ -202,24 +202,25 @@ const IndexPage = () => {
           <h1 className={classes.center}>Projects</h1>
           <p className={classes.text}>This is a list of some of my more recent projects:</p>
           <Grid container spacing={0}>
+            
             <Grid item md={6} sm={6} xs={12}>
               <Card className={classes.root}>
                   <CardMedia
                     className={classes.media}
-                    image={require("../images/BlogVBlog.jpg")}
-                    title="Blog V Blog"
+                    image={require("../images/Dionysus.jpg")}
+                    title="Dionysus"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Blog V Blog
+                      Dionysus
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      A website where users pick one out of two randomly chosen blog titles, in the same category, that they find the most interesting
+                      Dionysus is a web application that allows users to create secure accounts and store data.
                     </Typography>
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={projectLinks(0)}>Go To Site</Link>
+                    <Link href={projectLinks(2)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -250,20 +251,20 @@ const IndexPage = () => {
               <Card className={classes.root}>
                   <CardMedia
                     className={classes.media}
-                    image={require("../images/Dionysus.jpg")}
-                    title="Dionysus"
+                    image={require("../images/BlogVBlog.jpg")}
+                    title="Blog V Blog"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Dionysus
+                      Blog V Blog
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      Dionysus is my most recent project that creates secure user accounts and and allows users to store some data
+                      A website where users pick one out of two randomly chosen blog titles, in the same category, that they find the most interesting
                     </Typography>
                   </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    <Link href={projectLinks(2)}>Go To Site</Link>
+                    <Link href={projectLinks(0)}>Go To Site</Link>
                   </Button>
                 </CardActions>
               </Card>
@@ -280,7 +281,7 @@ const IndexPage = () => {
                       And Many More
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      This is my github that contains all the projects I have work on thoughout the years
+                      Check my GitHub to see more projects.
                     </Typography>
                   </CardContent>
                 <CardActions>
