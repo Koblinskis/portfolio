@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -57,10 +58,12 @@ export default function Header() {
       case 0: 
         return <EmailIcon/>;
       case 1:
-        return <GitHubIcon/>;
+        return <MenuBookIcon/>
       case 2:
+        return <GitHubIcon/>;
+      case 3:
         return <TwitterIcon/>;
-      case 3: 
+      case 4: 
         return <LinkedInIcon/>;
       default:
         return
@@ -72,10 +75,12 @@ export default function Header() {
       case 0:
         return "mailto:stevenkoblinskiw@gmail.com";
       case 1:
-        return "https://github.com/Koblinskis";
+        return "https://medium.com/@stevenkoblinskiw";
       case 2:
+        return "https://github.com/Koblinskis";
+      case 3:
         return "https://twitter.com/KoblinskiSteven";
-      case 3: 
+      case 4: 
         return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b/";
       default:
         return
@@ -100,7 +105,7 @@ export default function Header() {
     <AImage/>
     <p className={classes.text}>S. Michael Koblinski</p>
       <List>
-            {['Email', 'GitHub', 'Twitter', 'LinkedIn'].map((text, index) => (
+            {['Email', 'Blog', 'GitHub', 'Twitter', 'LinkedIn'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)} >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
@@ -132,6 +137,8 @@ export default function Header() {
             <MenuIcon onClick={toggleDrawer('left', true)} />
           </IconButton>
           <div>S. MICHAEL KOBLINSKI</div>
+          <a href='#projects' style={{textDecoration: 'none', color: 'white', marginRight: '20px', marginLeft: '20px'}}>Projects</a>
+          <a href='#blogs' style={{textDecoration: 'none', color: 'white'}}>Blog</a>
         </Toolbar>
       </AppBar>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>

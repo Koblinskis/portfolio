@@ -18,9 +18,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea'
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid'
@@ -123,10 +124,12 @@ const IndexPage = () => {
       case 0: 
         return <EmailIcon/>;
       case 1:
-        return <GitHubIcon/>;
+        return <MenuBookIcon/>
       case 2:
+        return <GitHubIcon/>;
+      case 3:
         return <TwitterIcon/>;
-      case 3: 
+      case 4: 
         return <LinkedInIcon/>;
       default:
         return
@@ -138,10 +141,12 @@ const IndexPage = () => {
       case 0:
         return "mailto:stevenkoblinskiw@gmail.com";
       case 1:
-        return "https://github.com/Koblinskis";
+        return "https://medium.com/@stevenkoblinskiw";
       case 2:
+        return "https://github.com/Koblinskis";
+      case 3:
         return "https://twitter.com/KoblinskiSteven";
-      case 3: 
+      case 4: 
         return "https://www.linkedin.com/in/s-michael-koblinski-53a95519b/";
       default:
         return
@@ -184,7 +189,7 @@ const IndexPage = () => {
           <AImage />
           <p className={classes.centerTwo}>S. Michael Koblinski</p>
           <List>
-            {['Email', 'GitHub', 'Twitter', 'LinkedIn'].map((text, index) => (
+            {['Email', 'Blog', 'GitHub', 'Twitter', 'LinkedIn'].map((text, index) => (
               <div><Divider /><Link href={links(index)} >
               <ListItem button key={text} href={links(index)}  >
                 <ListItemIcon>{icons(index)}</ListItemIcon>
@@ -203,12 +208,13 @@ const IndexPage = () => {
           <h1 className={classes.center}>About Me</h1>
           <p className={classes.text}>Junior developer seeking full-time employment as a full-stack developer. Mentored under senior developer in a structured training program including weekly attendance meetings and completion of goals. Completion of several course certificates and personal projects. Projects include both pair-programming and single projects exhibiting both front end and back end knowledge. Proficient in React, Gatsby, React Hooks, as well as NodeJS, mongoDB, REST APIs.</p>
           
-          <h1 className={classes.center}>Projects</h1>
+          <h1 id="projects" className={classes.center}>Projects</h1>
           <p>Here are some of my most recent projects.</p>
           <Grid container spacing={0}>
             
             <Grid item md={6} sm={6} xs={12}>
               <Card className={classes.root}>
+                <CardActionArea href={projectLinks(2)}>
                   <CardMedia
                     className={classes.media}
                     image={require("../images/Dionysus.jpg")}
@@ -222,6 +228,7 @@ const IndexPage = () => {
                       Dionysus is a web application that allows users to create secure accounts and store data.
                     </Typography>
                   </CardContent>
+                  </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     <Link href={projectLinks(2)}>Go To Site</Link>
@@ -231,6 +238,7 @@ const IndexPage = () => {
             </Grid>
             <Grid item md={6} sm={6} xs={12}>
               <Card className={classes.root}>
+                <CardActionArea href={projectLinks(1)}>
                   <CardMedia
                     className={classes.media}
                     image={require("../images/New-foods.jpg")}
@@ -244,6 +252,7 @@ const IndexPage = () => {
                       Catalog site for New International Foods, the #1 distributor of Asian foods in the eastern United States market. Made with Gatsby.
                     </Typography>
                   </CardContent>
+                  </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     <Link href={projectLinks(1)}>Go To Site</Link>
@@ -253,6 +262,7 @@ const IndexPage = () => {
             </Grid>
             <Grid item md={6} sm={6} xs={12}>
               <Card className={classes.root}>
+                <CardActionArea href={projectLinks(0)}>
                   <CardMedia
                     className={classes.media}
                     image={require("../images/BlogVBlog.jpg")}
@@ -266,6 +276,7 @@ const IndexPage = () => {
                       A website where users pick one out of two randomly chosen blog titles, in the same category, that they find the most interesting
                     </Typography>
                   </CardContent>
+                  </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     <Link href={projectLinks(0)}>Go To Site</Link>
@@ -275,6 +286,8 @@ const IndexPage = () => {
             </Grid>
             <Grid item md={6} sm={6} xs={12}>
               <Card className={classes.root}>
+                
+              <CardActionArea href={projectLinks(3)}>
                   <CardMedia
                     className={classes.media}
                     image={require("../images/github.jpg")}
@@ -288,6 +301,7 @@ const IndexPage = () => {
                       Check my GitHub to see more projects.
                     </Typography>
                   </CardContent>
+                  </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">
                     <Link href={projectLinks(3)}>Go To Site</Link>
@@ -296,7 +310,7 @@ const IndexPage = () => {
               </Card>
             </Grid>
           </Grid>
-          <h1 className={classes.center}>Blog Articles</h1>
+          <h1 id="blogs" className={classes.center}>Blog Articles</h1>
 
           <p>Here are some blog articles that I have authored. Follow me on <a href="https://medium.com/@stevenkoblinskiw">Medium</a>.</p>
               <ul style={{textAlign: 'left', fontSize: '20px', lineHeight: '2'}}>
