@@ -250,7 +250,7 @@ const IndexPage = () => {
               <Card className={classes.root}>
                   <CardMedia
                     className={classes.media}
-                    image={require("../images/Dionysus.PNG")}
+                    image={require("../images/Dionysus.jpg")}
                     title="Dionysus"
                   />
                   <CardContent>
@@ -272,7 +272,7 @@ const IndexPage = () => {
               <Card className={classes.root}>
                   <CardMedia
                     className={classes.media}
-                    image={require("../images/github.png")}
+                    image={require("../images/github.jpg")}
                     title="Github"
                   />
                   <CardContent>
