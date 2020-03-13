@@ -206,7 +206,7 @@ const IndexPage = () => {
         <Box borderTop={1} borderBottom={2} borderRight={2} borderColor='#cecece' className={classes.content} component="div">
 
           <h1 className={classes.center}>About Me</h1>
-          <p className={classes.text}>Junior developer seeking full-time employment as a full-stack developer. Mentored under senior developer in a structured training program including weekly attendance meetings and completion of goals. Completion of several course certificates and personal projects. Projects include both pair-programming and single projects exhibiting both front end and back end knowledge. Proficient in React, Gatsby, React Hooks, as well as NodeJS, mongoDB, REST APIs.</p>
+          <p className={classes.text}>I am a Full-Stack developer seeking new challenges to further my growth. I first worked with  JavaScript in 2015, but began full-time Full-Stack JavaScript development over six months ago  and in that time I have completed over 150 hours of instructor-led courses, 15 projects, published  a blog, collaborated with other developers, participated in Hacktoberfest 2019, and have  independently studied Computer Science and Data Structures. I have mastered tools and  frameworks such as React JS, Gatsby, NodeJS, Express, and MongoDB.</p>
           
           <h1 id="projects" className={classes.center}>Projects</h1>
           <p>Here are some of my most recent projects.</p>
