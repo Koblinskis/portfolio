@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     justifyContent: 'center',
+    marginBottom: '30px'
   },
   sideBar: {
     display: 'inline',
@@ -312,7 +313,7 @@ const IndexPage = () => {
           </Grid>
           <h1 id="blogs" className={classes.center}>Blog Articles</h1>
 
-          <p>Here are some blog articles that I have authored. Follow me on <a href="https://medium.com/@stevenkoblinskiw">Medium</a>.</p>
+          <h4>Here are some blog articles that I have authored. Follow me on <a href="https://medium.com/@stevenkoblinskiw">Medium</a>.</h4>
               <ul style={{textAlign: 'left', fontSize: '20px', lineHeight: '2'}}>
                 <li><a href={blogLinks(2)}>Inheritance and the Prototype Chain</a></li>
                 <li><a href={blogLinks(3)}>Closures In JavaScript</a></li>
